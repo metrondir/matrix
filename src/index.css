@@ -1,13 +1,82 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.matrix-row {
+  display: flex;
+  justify-content: space-between;
+}
+.dynamic-matrix-container {
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  font-family: "Arial", sans-serif;
+  color: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.dynamic-matrix {
+  display: flex;
+  flex-wrap: nowrap;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.dynamic-matrix td {
+  border: 1px solid #444;
+  padding: 8px;
+  text-align: center;
+}
+
+.dynamic-matrix input {
+  width: 40px;
+  padding: 5px;
+  text-align: center;
+  background-color: #555;
+  color: #fff;
+  border: none;
+}
+
+.dynamic-matrix th {
+  background-color: #222;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.dynamic-matrix th,
+.dynamic-matrix td {
+  padding: 5px;
+  transition: background-color 0.3s;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
